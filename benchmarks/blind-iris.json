@@ -1,0 +1,624 @@
+{
+  "evaluation_script_sha256": "2a25e340c01cc11d496563ec917baa676ca060a0cf4f8134bdda032372e0ba07",
+  "protocol_sha256": "8365fbfe8734414692c1536d3bcd0534c61d61df5022264fc52f33fe8b2ca375",
+  "protocol": "Frozen estimator before acquiring unseen take03/take06 at three IRIS pendulum release settings. Source2..10s, initial65% physical/geometry fitting, remaining35% forecast. First-frame-only fixed ROI rule. All six attempted; no hyperparameter tuning on these clips.",
+  "scope": "Held-out recording transfer relative to RealityForge development clips, not official IRIS split or independent manual tracking truth. Known dynamics family specified for parameter comparison; automatic selection evaluated separately.",
+  "limitations": [
+    "Errors are against automatically extracted image tracks.",
+    "Nominal rope length0.5m is not exact pivot-to-bob-center effective length.",
+    "No damping ground truth or calibrated uncertainty coverage for these recordings.",
+    "Published recurrence comparator adapts observed angles; it is not full EndPhys reproduction.",
+    "Network trained only on synthetic data; no IRIS frames or parameters used in training."
+  ],
+  "frozen_artifact_sha256": {
+    "realityforge/physics.py": "dc9918ecea00d3138666a35ef8f357f2cb931f8daec757dfff8dbdd2c8647e26",
+    "realityforge/tracking.py": "fd474b6d738001f381338c6bb67206443ec88b5bdd5bcc0f1f802e29adc2f5e7",
+    "realityforge/inference.py": "9614b8df063b444642957fb0fde3b01348886906db32d9c58502e99d453398e1",
+    "realityforge/estimator.py": "f4e76af43ddeb576cf0cbe59f4801a6bbf68870fd8af0cfe3b20d8f356254dee",
+    "realityforge/baselines.py": "851b8c6063814739f31f3808cadf9ca0abc9c51ee7e6e250c207b86ece304e36",
+    "models/pendulum.pt": "4a373f980704503136205e3b7829185906ca76a331f4ecf2b6e0c21c35625e65",
+    "models/sliding.pt": "a7a006da41e85238b7ac2816556752d6741189f51ae370b846912f4071ed07a7"
+  },
+  "manifest": "samples/blind-provenance.json",
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "torch": "2.14.1",
+    "numpy": "2.5.4"
+  },
+  "summary": {
+    "hybrid": {
+      "attempted": 6,
+      "succeeded": 6,
+      "failed": 0,
+      "forecast_rmse_px_median": 12.58858044928757,
+      "forecast_rmse_px_max": 23.36256303265882,
+      "fit_rmse_px_median": 7.7135728603956135,
+      "fit_rmse_px_max": 21.682612875081528,
+      "inference_runtime_s_median": 3.093515562475659,
+      "inference_runtime_s_max": 77.38463645800948,
+      "relative_difference_to_nominal_rope_length_median": 0.05129341268054999,
+      "relative_difference_to_nominal_rope_length_max": 0.08077480914254642
+    },
+    "analytical_refine": {
+      "attempted": 6,
+      "succeeded": 6,
+      "failed": 0,
+      "forecast_rmse_px_median": 12.588640769606059,
+      "forecast_rmse_px_max": 23.362497452187135,
+      "fit_rmse_px_median": 7.71357329452727,
+      "fit_rmse_px_max": 21.682611615128128,
+      "inference_runtime_s_median": 4.1903385205660015,
+      "inference_runtime_s_max": 34.82067416701466,
+      "relative_difference_to_nominal_rope_length_median": 0.05129331662653569,
+      "relative_difference_to_nominal_rope_length_max": 0.08077489353309053
+    },
+    "iris_recurrence": {
+      "attempted": 6,
+      "succeeded": 6,
+      "failed": 0,
+      "forecast_rmse_px_median": 54.00786993354636,
+      "forecast_rmse_px_max": 120.01119971895533,
+      "fit_rmse_px_median": 53.303485218291115,
+      "fit_rmse_px_max": 120.37417667511453,
+      "inference_runtime_s_median": 0.010394478973466903,
+      "inference_runtime_s_max": 0.09719066694378853,
+      "relative_difference_to_nominal_rope_length_median": 0.08085349396728636,
+      "relative_difference_to_nominal_rope_length_max": 0.09896081896366504
+    }
+  },
+  "rows": [
+    {
+      "id": "blind-pendulum20-take03",
+      "source_path": "Pendulum/pendulum_20/03.mp4",
+      "methods": {
+        "hybrid": {
+          "parameters": {
+            "k": 18.895834129423992,
+            "beta": 0.055446209304762614,
+            "theta0": 0.21366261405701428,
+            "omega0": 1.6612166371289292
+          },
+          "fit_rmse_px": 10.423814129079416,
+          "forecast_rmse_px": 11.087657007372162,
+          "inference_runtime_s": 3.883946374990046,
+          "effective_length_assuming_earth_g_m": 0.5189847631404318,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.0379695262808637,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "analytical_refine": {
+          "parameters": {
+            "k": 18.895835176240688,
+            "beta": 0.05544633617043079,
+            "theta0": 0.21366253020489573,
+            "omega0": 1.6612174896727234
+          },
+          "fit_rmse_px": 10.423814210542853,
+          "forecast_rmse_px": 11.08764833166262,
+          "inference_runtime_s": 5.876752583077177,
+          "effective_length_assuming_earth_g_m": 0.5189847343890214,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.03796946877804275,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "iris_recurrence": {
+          "parameters": {
+            "k": 17.87760051694673,
+            "beta": 0.013539754270465021,
+            "theta0": 0.30296784407668476,
+            "omega0": 0.6835158186919277
+          },
+          "fit_rmse_px": 40.32831774520586,
+          "forecast_rmse_px": 25.781651722313796,
+          "inference_runtime_s": 0.01595679100137204,
+          "effective_length_assuming_earth_g_m": 0.5485439721457012,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.09708794429140233,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        }
+      },
+      "expected_model": "pendulum",
+      "status": "evaluated",
+      "tracking_runtime_s": 1.3422697910573334,
+      "roi": [
+        582,
+        432,
+        72,
+        73
+      ],
+      "tracking_mean_confidence": 0.9985283296541574,
+      "tracking_low_confidence_fraction": 0.0,
+      "frames": 240,
+      "tracking_horizon_s": 7.966666666666667,
+      "automatic_selection": {
+        "selected": "pendulum",
+        "diagnostics": {
+          "requested": "auto",
+          "method": "fit-prefix geometry and motion-reversal screening",
+          "line_relative_error": 0.036126660874110934,
+          "motion_reversals": 7,
+          "circle_admissible": true
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum20-take06",
+      "source_path": "Pendulum/pendulum_20/06.mp4",
+      "methods": {
+        "hybrid": {
+          "parameters": {
+            "k": 18.773373413525547,
+            "beta": 0.04950995567536587,
+            "theta0": -0.12554832395026586,
+            "omega0": 1.9662195430136138
+          },
+          "fit_rmse_px": 21.682612875081528,
+          "forecast_rmse_px": 23.36256303265882,
+          "inference_runtime_s": 14.823281833902001,
+          "effective_length_assuming_earth_g_m": 0.5223701560708667,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.04474031214173335,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "analytical_refine": {
+          "parameters": {
+            "k": 18.77337944379728,
+            "beta": 0.04950908478004919,
+            "theta0": -0.12554874828647516,
+            "omega0": 1.966217347591464
+          },
+          "fit_rmse_px": 21.682611615128128,
+          "forecast_rmse_px": 23.362497452187135,
+          "inference_runtime_s": 20.796390707953833,
+          "effective_length_assuming_earth_g_m": 0.5223699882782753,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.0447399765565506,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "iris_recurrence": {
+          "parameters": {
+            "k": 17.847133092966505,
+            "beta": 3.5506142840296877e-12,
+            "theta0": -0.002066722645424273,
+            "omega0": 1.0116576287445298
+          },
+          "fit_rmse_px": 62.366921052237146,
+          "forecast_rmse_px": 52.19193113164694,
+          "inference_runtime_s": 0.09719066694378853,
+          "effective_length_assuming_earth_g_m": 0.5494804094818325,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.09896081896366504,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        }
+      },
+      "expected_model": "pendulum",
+      "status": "evaluated",
+      "tracking_runtime_s": 5.9147114580264315,
+      "roi": [
+        448,
+        459,
+        72,
+        73
+      ],
+      "tracking_mean_confidence": 0.9738193695313436,
+      "tracking_low_confidence_fraction": 0.0,
+      "frames": 240,
+      "tracking_horizon_s": 7.966666666666667,
+      "automatic_selection": {
+        "selected": "pendulum",
+        "diagnostics": {
+          "requested": "auto",
+          "method": "fit-prefix geometry and motion-reversal screening",
+          "line_relative_error": 0.06930586502142164,
+          "motion_reversals": 7,
+          "circle_admissible": true
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum45-take03",
+      "source_path": "Pendulum/pendulum_45/03.mp4",
+      "methods": {
+        "hybrid": {
+          "parameters": {
+            "k": 18.62803497103226,
+            "beta": 0.06317534551379454,
+            "theta0": -0.2446432823708048,
+            "omega0": 3.1311129288399107
+          },
+          "fit_rmse_px": 7.343118251032124,
+          "forecast_rmse_px": 7.953874111625748,
+          "inference_runtime_s": 77.38463645800948,
+          "effective_length_assuming_earth_g_m": 0.5264457585166629,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.05289151703332573,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "analytical_refine": {
+          "parameters": {
+            "k": 18.62803593779984,
+            "beta": 0.06317534594790084,
+            "theta0": -0.24464295499194103,
+            "omega0": 3.13111460960331
+          },
+          "fit_rmse_px": 7.343118462469656,
+          "forecast_rmse_px": 7.95375335527249,
+          "inference_runtime_s": 34.82067416701466,
+          "effective_length_assuming_earth_g_m": 0.5264457311949047,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.05289146238980935,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "iris_recurrence": {
+          "parameters": {
+            "k": 18.613869896665122,
+            "beta": 1.9233403905030038e-08,
+            "theta0": -0.10164383422821625,
+            "omega0": 1.6237402164675303
+          },
+          "fit_rmse_px": 120.37417667511453,
+          "forecast_rmse_px": 120.01119971895533,
+          "inference_runtime_s": 0.02013574994634837,
+          "effective_length_assuming_earth_g_m": 0.5268463814586438,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.05369276291728764,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        }
+      },
+      "expected_model": "pendulum",
+      "status": "evaluated",
+      "tracking_runtime_s": 15.753993666963652,
+      "roi": [
+        424,
+        447,
+        78,
+        71
+      ],
+      "tracking_mean_confidence": 0.999002031791562,
+      "tracking_low_confidence_fraction": 0.0,
+      "frames": 240,
+      "tracking_horizon_s": 7.966666666666667,
+      "automatic_selection": {
+        "selected": "pendulum",
+        "diagnostics": {
+          "requested": "auto",
+          "method": "fit-prefix geometry and motion-reversal screening",
+          "line_relative_error": 0.10825798653979282,
+          "motion_reversals": 7,
+          "circle_admissible": true
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum45-take06",
+      "source_path": "Pendulum/pendulum_45/06.mp4",
+      "methods": {
+        "hybrid": {
+          "parameters": {
+            "k": 18.684755323185286,
+            "beta": 0.0650195653083853,
+            "theta0": -0.3497870561327852,
+            "omega0": 3.022496732415922
+          },
+          "fit_rmse_px": 7.888535552341774,
+          "forecast_rmse_px": 7.808330175722274,
+          "inference_runtime_s": 2.303084749961272,
+          "effective_length_assuming_earth_g_m": 0.5248476541638871,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.049695308327774246,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "analytical_refine": {
+          "parameters": {
+            "k": 18.684757770077344,
+            "beta": 0.06501983379957837,
+            "theta0": -0.34978728474795634,
+            "omega0": 3.0224996462707634
+          },
+          "fit_rmse_px": 7.8885346993142464,
+          "forecast_rmse_px": 7.80817349809308,
+          "inference_runtime_s": 2.5039244580548257,
+          "effective_length_assuming_earth_g_m": 0.524847585431631,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.04969517086326203,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "iris_recurrence": {
+          "parameters": {
+            "k": 18.702345663913476,
+            "beta": 3.746600410711577e-12,
+            "theta0": -0.19865000537310265,
+            "omega0": 1.6712955412474624
+          },
+          "fit_rmse_px": 107.03834297863531,
+          "forecast_rmse_px": 108.19883878112984,
+          "inference_runtime_s": 0.004832166945561767,
+          "effective_length_assuming_earth_g_m": 0.5243540129258819,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.048708025851763814,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        }
+      },
+      "expected_model": "pendulum",
+      "status": "evaluated",
+      "tracking_runtime_s": 2.211627500015311,
+      "roi": [
+        382,
+        450,
+        76,
+        71
+      ],
+      "tracking_mean_confidence": 1.0,
+      "tracking_low_confidence_fraction": 0.0,
+      "frames": 240,
+      "tracking_horizon_s": 7.966666666666667,
+      "automatic_selection": {
+        "selected": "pendulum",
+        "diagnostics": {
+          "requested": "auto",
+          "method": "fit-prefix geometry and motion-reversal screening",
+          "line_relative_error": 0.10012860734112775,
+          "motion_reversals": 7,
+          "circle_admissible": true
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum90-take03",
+      "source_path": "Pendulum/pendulum_90/03.mp4",
+      "methods": {
+        "hybrid": {
+          "parameters": {
+            "k": 18.181839054185158,
+            "beta": 0.1587141670060903,
+            "theta0": -1.2346109050516363,
+            "omega0": 0.003906648918662173
+          },
+          "fit_rmse_px": 5.657524908856333,
+          "forecast_rmse_px": 14.702516739555888,
+          "inference_runtime_s": 2.0166147090494633,
+          "effective_length_assuming_earth_g_m": 0.539365130819518,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.07873026163903596,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "analytical_refine": {
+          "parameters": {
+            "k": 18.181839608249014,
+            "beta": 0.1587142444257778,
+            "theta0": -1.2346112423292364,
+            "omega0": 0.00390779477471977
+          },
+          "fit_rmse_px": 5.657524794496877,
+          "forecast_rmse_px": 14.702504029594598,
+          "inference_runtime_s": 1.1808576670009643,
+          "effective_length_assuming_earth_g_m": 0.5393651143831876,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.07873022876637514,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "iris_recurrence": {
+          "parameters": {
+            "k": 17.987307403144197,
+            "beta": 0.1663239990798694,
+            "theta0": -1.2352874593061638,
+            "omega0": 0.5774436294456287
+          },
+          "fit_rmse_px": 14.601448571726422,
+          "forecast_rmse_px": 19.03952932696239,
+          "inference_runtime_s": 0.002582375076599419,
+          "effective_length_assuming_earth_g_m": 0.5451983323688452,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.09039666473769037,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        }
+      },
+      "expected_model": "pendulum",
+      "status": "evaluated",
+      "tracking_runtime_s": 1.4181259169708937,
+      "roi": [
+        76,
+        169,
+        76,
+        73
+      ],
+      "tracking_mean_confidence": 0.9376804003724395,
+      "tracking_low_confidence_fraction": 0.0,
+      "frames": 240,
+      "tracking_horizon_s": 7.966666666666667,
+      "automatic_selection": {
+        "selected": "pendulum",
+        "diagnostics": {
+          "requested": "auto",
+          "method": "fit-prefix geometry and motion-reversal screening",
+          "line_relative_error": 0.25061395317479407,
+          "motion_reversals": 6,
+          "circle_admissible": true
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum90-take06",
+      "source_path": "Pendulum/pendulum_90/06.mp4",
+      "methods": {
+        "hybrid": {
+          "parameters": {
+            "k": 18.147443698804,
+            "beta": 0.1530904166424628,
+            "theta0": -1.1508187238495964,
+            "omega0": 1.6302289852783498
+          },
+          "fit_rmse_px": 7.538610168449453,
+          "forecast_rmse_px": 14.089503891202979,
+          "inference_runtime_s": 1.9274154580198228,
+          "effective_length_assuming_earth_g_m": 0.5403874045712732,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.08077480914254642,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "analytical_refine": {
+          "parameters": {
+            "k": 18.147442281790468,
+            "beta": 0.15309051873060847,
+            "theta0": -1.1508186013113129,
+            "omega0": 1.6302238872580312
+          },
+          "fit_rmse_px": 7.538611889740295,
+          "forecast_rmse_px": 14.089633207549495,
+          "inference_runtime_s": 2.1131365000037476,
+          "effective_length_assuming_earth_g_m": 0.5403874467665453,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.08077489353309053,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        },
+        "iris_recurrence": {
+          "parameters": {
+            "k": 18.307767203691476,
+            "beta": 0.13502816104625984,
+            "theta0": -1.06469845426045,
+            "omega0": 1.3895369648558598
+          },
+          "fit_rmse_px": 44.240049384345085,
+          "forecast_rmse_px": 55.82380873544578,
+          "inference_runtime_s": 0.0037897080183029175,
+          "effective_length_assuming_earth_g_m": 0.5356551615984412,
+          "nominal_rope_length_m": 0.5,
+          "relative_difference_to_nominal_rope_length": 0.07131032319688235,
+          "warnings": [
+            "Pendulum assumes an upright fixed camera, planar point-mass motion, and viscous damping. Only k = g/L is recovered dynamically; g and L are not separately identifiable.",
+            "No scale calibration supplied. Pixel distances are not meters. Pendulum angles assume a front-facing circular motion plane.",
+            "Nominal 95% intervals are uncalibrated local linear approximations conditional on the chosen model, fitted geometry and independent residual noise. They exclude scale, camera, tracking bias and model uncertainty."
+          ],
+          "fit_count": 156,
+          "fit_end_s": 5.166666666666667
+        }
+      },
+      "expected_model": "pendulum",
+      "status": "evaluated",
+      "tracking_runtime_s": 1.6125238749664277,
+      "roi": [
+        98,
+        226,
+        74,
+        75
+      ],
+      "tracking_mean_confidence": 0.9099957555178267,
+      "tracking_low_confidence_fraction": 0.0,
+      "frames": 240,
+      "tracking_horizon_s": 7.966666666666667,
+      "automatic_selection": {
+        "selected": "pendulum",
+        "diagnostics": {
+          "requested": "auto",
+          "method": "fit-prefix geometry and motion-reversal screening",
+          "line_relative_error": 0.1934900797634697,
+          "motion_reversals": 6,
+          "circle_admissible": true
+        }
+      }
+    }
+  ]
+}

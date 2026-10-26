@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-25",
+  "training": "None of these recordings are used to train the estimator. Training is synthetic only. This is a small held-out recording subset, not the complete official IRIS evaluation protocol.",
+  "records": [
+    {
+      "id": "pendulum20",
+      "path": "samples/iris/pendulum20.mp4",
+      "dataset": "IRIS",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_20/10.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_path": "Pendulum/pendulum_20/10.mp4",
+      "source_start_seconds": 0,
+      "requested_duration_seconds": 8,
+      "output_fps": 30,
+      "width": 960,
+      "height": 540,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "authors": "Rasul Khanbayov, Mohamed Rayan Barhdadi, Erchin Serpedin, Hasan Kurban",
+      "suggested_roi_xywh": [
+        324,
+        425,
+        64,
+        74
+      ],
+      "ground_truth": {
+        "rope_length_m": 0.5
+      },
+      "role": "evaluation_only",
+      "temporal_mapping": "source_time = local_time + source_start_seconds; no playback-speed change",
+      "sha256": "15dce3f9425fb14278ec97099a8e1d29e264ea62dffd379d32eedfde71c16eb6",
+      "bytes": 232496,
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "30/1",
+            "nb_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "id": "pendulum45",
+      "path": "samples/iris/pendulum45.mp4",
+      "dataset": "IRIS",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_45/10.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_path": "Pendulum/pendulum_45/10.mp4",
+      "source_start_seconds": 0.4,
+      "requested_duration_seconds": 7.6,
+      "output_fps": 30,
+      "width": 960,
+      "height": 540,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "authors": "Rasul Khanbayov, Mohamed Rayan Barhdadi, Erchin Serpedin, Hasan Kurban",
+      "suggested_roi_xywh": [
+        341,
+        439,
+        70,
+        66
+      ],
+      "ground_truth": {
+        "rope_length_m": 0.5
+      },
+      "role": "evaluation_only",
+      "temporal_mapping": "source_time = local_time + source_start_seconds; no playback-speed change",
+      "sha256": "5aacfa20756e1047c1c3b493a44d4f91e032f6b1a59abf37f1e2c4efaace4cb2",
+      "bytes": 305993,
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "30/1",
+            "nb_frames": "228"
+          }
+        ],
+        "format": {
+          "duration": "7.600000"
+        }
+      }
+    },
+    {
+      "id": "pendulum90",
+      "path": "samples/iris/pendulum90.mp4",
+      "dataset": "IRIS",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_90/10.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_path": "Pendulum/pendulum_90/10.mp4",
+      "source_start_seconds": 0.6,
+      "requested_duration_seconds": 7.4,
+      "output_fps": 30,
+      "width": 960,
+      "height": 540,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "authors": "Rasul Khanbayov, Mohamed Rayan Barhdadi, Erchin Serpedin, Hasan Kurban",
+      "suggested_roi_xywh": [
+        297,
+        414,
+        74,
+        70
+      ],
+      "ground_truth": {
+        "rope_length_m": 0.5
+      },
+      "role": "evaluation_only",
+      "temporal_mapping": "source_time = local_time + source_start_seconds; no playback-speed change",
+      "sha256": "2a39289f154215b61c226f4148e3594202cf73afd7c3ce74dd95b78b6694f8bd",
+      "bytes": 343854,
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "30/1",
+            "nb_frames": "222"
+          }
+        ],
+        "format": {
+          "duration": "7.400000"
+        }
+      }
+    },
+    {
+      "id": "sliding45",
+      "path": "samples/iris/sliding45.mp4",
+      "dataset": "IRIS",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Sliding_cone/cone_45/10.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_path": "Sliding_cone/cone_45/10.mp4",
+      "source_start_seconds": 1.9,
+      "requested_duration_seconds": 1.1,
+      "output_fps": 30,
+      "width": 960,
+      "height": 540,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "authors": "Rasul Khanbayov, Mohamed Rayan Barhdadi, Erchin Serpedin, Hasan Kurban",
+      "suggested_roi_xywh": [
+        647,
+        125,
+        90,
+        98
+      ],
+      "ground_truth": {},
+      "role": "evaluation_only",
+      "temporal_mapping": "source_time = local_time + source_start_seconds; no playback-speed change",
+      "sha256": "634aebd6a3b6ae14687e1e479bc0499ec87b43480a26d114c6556bb6b9c9feda",
+      "bytes": 109035,
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "30/1",
+            "nb_frames": "33"
+          }
+        ],
+        "format": {
+          "duration": "1.100000"
+        }
+      }
+    },
+    {
+      "id": "rhetos-pendulum",
+      "path": "samples/independent/rhetos-pendulum.mp4",
+      "dataset": "independent Wikimedia recording",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Schwingung_%28Definition%29.webm",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Schwingung_(Definition).webm",
+      "source_original_sha1": "6f3f8a69ae55306fdad48cd2f8ef126656bc972b",
+      "source_start_seconds": 15,
+      "requested_duration_seconds": 10,
+      "output_fps": 25,
+      "width": 960,
+      "height": 540,
+      "license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "authors": "Rhetos / Mathe-AC Lernwerkstatt Aachen",
+      "suggested_roi_xywh": [
+        227,
+        205,
+        68,
+        72
+      ],
+      "ground_truth": {
+        "author_reported_rope_length_m": 0.5
+      },
+      "ground_truth_caution": "Approximate author-reported length; no metrology or uncertainty; no independently verified physical parameter truth. Pivot is outside image.",
+      "role": "evaluation_only",
+      "temporal_mapping": "source_time = local_time + 15; no playback-speed change",
+      "changes": "Trimmed 15..25s, resized to960x540, audio removed and transcoded H264. Derived recording remains CC BY-SA4.0.",
+      "sha256": "7b5743d7afcb24b172b60449673c3a6b9ca3cb0acadbaa9d21d52b7810665126",
+      "bytes": 683975,
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "avg_frame_rate": "25/1",
+            "nb_frames": "249"
+          }
+        ],
+        "format": {
+          "duration": "9.960000"
+        }
+      }
+    }
+  ]
+}

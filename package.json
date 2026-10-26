@@ -1,0 +1,7 @@
+{
+  "name": "realityforge-dev-tools",
+  "private": true,
+  "description": "Optional browser verification and authentic demo capture; the app itself is build-free.",
+  "scripts": { "demo:record": "node scripts/record_demo.cjs" },
+  "devDependencies": { "playwright": "1.62.1" }
+}

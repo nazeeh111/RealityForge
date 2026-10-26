@@ -1,0 +1,7 @@
+include LICENSE NOTICE.md README.md
+recursive-include web *.html *.css *.js *.svg
+recursive-include models *.pt *.pt2 *.json *.torchscript
+recursive-include samples *.mp4 *.md *.json
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include docs *.md *.svg *.png

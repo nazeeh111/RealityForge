@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software in research, cite the software and the original research/data sources relevant to your experiment."
+title: RealityForge
+version: 0.1.0
+date-released: 2026-10-25
+type: software
+authors:
+  - name: RealityForge contributors
+repository-code: https://github.com/nazeeh111/RealityForge
+license: MIT
+abstract: "Local planar video-to-physics inference with compact learned parameter initialization, differentiable physics refinement, held-out prediction and interactive counterfactuals. Separately licensed experimental media is identified in NOTICE.md."
+keywords:
+  - inverse physics
+  - system identification
+  - differentiable physics
+  - video tracking
+  - PyTorch

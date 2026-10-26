@@ -1,0 +1,129 @@
+{
+  "samples": [
+    {
+      "id": "generated-pendulum",
+      "title": "Pendulum / generated",
+      "description": "Original generated fixture with known ground truth. Synthetic, not experimental evidence.",
+      "kind": "synthetic",
+      "video_url": "/samples/generated/pendulum.mp4",
+      "settings": {
+        "mode": "pendulum",
+        "roi": [
+          620,
+          310,
+          46,
+          46
+        ],
+        "fit_fraction": 0.65,
+        "meters_per_pixel": 0.002,
+        "pivot": [
+          480,
+          105
+        ]
+      }
+    },
+    {
+      "id": "generated-sliding",
+      "title": "Sliding / generated",
+      "description": "Original generated fixture with known ground truth. Synthetic, not experimental evidence.",
+      "kind": "synthetic",
+      "video_url": "/samples/generated/sliding.mp4",
+      "settings": {
+        "mode": "sliding",
+        "roi": [
+          111,
+          285,
+          48,
+          50
+        ],
+        "fit_fraction": 0.65,
+        "meters_per_pixel": 0.005
+      }
+    },
+    {
+      "id": "pendulum20",
+      "title": "IRIS / Pendulum 20\u00b0",
+      "description": "IRIS experimental recording. CC-BY-NC-4.0. Evaluation only.",
+      "kind": "real",
+      "video_url": "/samples/iris/pendulum20.mp4",
+      "settings": {
+        "mode": "pendulum",
+        "roi": [
+          324,
+          425,
+          64,
+          74
+        ],
+        "fit_fraction": 0.65
+      }
+    },
+    {
+      "id": "pendulum45",
+      "title": "IRIS / Pendulum 45\u00b0",
+      "description": "IRIS experimental recording. CC-BY-NC-4.0. Evaluation only.",
+      "kind": "real",
+      "video_url": "/samples/iris/pendulum45.mp4",
+      "settings": {
+        "mode": "pendulum",
+        "roi": [
+          341,
+          439,
+          70,
+          66
+        ],
+        "fit_fraction": 0.65
+      }
+    },
+    {
+      "id": "pendulum90",
+      "title": "IRIS / Pendulum 90\u00b0",
+      "description": "IRIS experimental recording. CC-BY-NC-4.0. Evaluation only.",
+      "kind": "real",
+      "video_url": "/samples/iris/pendulum90.mp4",
+      "settings": {
+        "mode": "pendulum",
+        "roi": [
+          297,
+          414,
+          74,
+          70
+        ],
+        "fit_fraction": 0.65
+      }
+    },
+    {
+      "id": "sliding45",
+      "title": "IRIS / Sliding cone",
+      "description": "IRIS experimental recording. CC-BY-NC-4.0. Evaluation only.",
+      "kind": "real",
+      "video_url": "/samples/iris/sliding45.mp4",
+      "settings": {
+        "mode": "sliding",
+        "roi": [
+          647,
+          125,
+          90,
+          98
+        ],
+        "fit_fraction": 0.65
+      }
+    },
+    {
+      "id": "rhetos-pendulum",
+      "title": "Independent / Household pendulum",
+      "description": "independent Wikimedia recording experimental recording. CC-BY-SA-4.0. Evaluation only.",
+      "kind": "real",
+      "video_url": "/samples/independent/rhetos-pendulum.mp4",
+      "settings": {
+        "mode": "pendulum",
+        "roi": [
+          227,
+          205,
+          68,
+          72
+        ],
+        "fit_fraction": 0.65
+      }
+    }
+  ]
+}

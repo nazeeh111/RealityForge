@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.mp4 binary
+*.png binary
+*.pt binary
+*.pt2 binary
+*.torchscript binary

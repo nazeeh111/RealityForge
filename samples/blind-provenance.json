@@ -1,0 +1,316 @@
+{
+  "created_utc": "2026-10-26T00:17:14.355354+00:00",
+  "protocol_frozen_before_acquisition": true,
+  "frozen_artifact_sha256": {
+    "realityforge/physics.py": "dc9918ecea00d3138666a35ef8f357f2cb931f8daec757dfff8dbdd2c8647e26",
+    "realityforge/tracking.py": "fd474b6d738001f381338c6bb67206443ec88b5bdd5bcc0f1f802e29adc2f5e7",
+    "realityforge/inference.py": "9614b8df063b444642957fb0fde3b01348886906db32d9c58502e99d453398e1",
+    "realityforge/estimator.py": "f4e76af43ddeb576cf0cbe59f4801a6bbf68870fd8af0cfe3b20d8f356254dee",
+    "realityforge/baselines.py": "851b8c6063814739f31f3808cadf9ca0abc9c51ee7e6e250c207b86ece304e36",
+    "models/pendulum.pt": "4a373f980704503136205e3b7829185906ca76a331f4ecf2b6e0c21c35625e65",
+    "models/sliding.pt": "a7a006da41e85238b7ac2816556752d6741189f51ae370b846912f4071ed07a7"
+  },
+  "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+  "selection_protocol": "Before viewing: fixed take03 and take06 at20,45,90degree nominal releases, source2..10seconds,960x54030fps. All six attempted.",
+  "roi_protocol": "First decoded frame only: fixed HSV hue25..90 saturation>=65 value>=35; largest connected component of at least80pixels, bounding box padded6pixels, no later frame inspection or tuning. If no component, record failure.",
+  "authors": "Rasul Khanbayov, Mohamed Rayan Barhdadi, Erchin Serpedin, Hasan Kurban",
+  "records": [
+    {
+      "id": "blind-pendulum20-take03",
+      "path": "samples/blind-iris/pendulum20-take03.mp4",
+      "source_path": "Pendulum/pendulum_20/03.mp4",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_20/03.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_start_seconds": 2,
+      "duration_seconds": 8,
+      "output_fps": 30,
+      "output_size": [
+        960,
+        540
+      ],
+      "temporal_mapping": "source_time = clip_time + 2 seconds; playback speed unchanged",
+      "nominal_rope_length_m": 0.5,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "sha256": "94e10fe6ecde57528f7f8228d5a97392f0fe213231207ce6faf5300b08709ca5",
+      "bytes": 243554,
+      "roi": [
+        582,
+        432,
+        72,
+        73
+      ],
+      "roi_evidence": {
+        "green_component_area_px": 2787,
+        "center": [
+          617.1593110871905,
+          468.10548977395047
+        ],
+        "first_frame_only": true
+      },
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum20-take06",
+      "path": "samples/blind-iris/pendulum20-take06.mp4",
+      "source_path": "Pendulum/pendulum_20/06.mp4",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_20/06.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_start_seconds": 2,
+      "duration_seconds": 8,
+      "output_fps": 30,
+      "output_size": [
+        960,
+        540
+      ],
+      "temporal_mapping": "source_time = clip_time + 2 seconds; playback speed unchanged",
+      "nominal_rope_length_m": 0.5,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "sha256": "d06a52562142f4636614eb790c1624569a3bb032ebded88841f45dcf4f4aac7e",
+      "bytes": 221339,
+      "roi": [
+        448,
+        459,
+        72,
+        73
+      ],
+      "roi_evidence": {
+        "green_component_area_px": 2881,
+        "center": [
+          482.96216591461297,
+          494.79347448802497
+        ],
+        "first_frame_only": true
+      },
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum45-take03",
+      "path": "samples/blind-iris/pendulum45-take03.mp4",
+      "source_path": "Pendulum/pendulum_45/03.mp4",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_45/03.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_start_seconds": 2,
+      "duration_seconds": 8,
+      "output_fps": 30,
+      "output_size": [
+        960,
+        540
+      ],
+      "temporal_mapping": "source_time = clip_time + 2 seconds; playback speed unchanged",
+      "nominal_rope_length_m": 0.5,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "sha256": "88db0d38ab0b8aee42e8ac2e39a5012f25970097890040866a019a2ef1a3b21e",
+      "bytes": 245106,
+      "roi": [
+        424,
+        447,
+        78,
+        71
+      ],
+      "roi_evidence": {
+        "green_component_area_px": 2909,
+        "center": [
+          461.18563080096254,
+          482.55482983843245
+        ],
+        "first_frame_only": true
+      },
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum45-take06",
+      "path": "samples/blind-iris/pendulum45-take06.mp4",
+      "source_path": "Pendulum/pendulum_45/06.mp4",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_45/06.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_start_seconds": 2,
+      "duration_seconds": 8,
+      "output_fps": 30,
+      "output_size": [
+        960,
+        540
+      ],
+      "temporal_mapping": "source_time = clip_time + 2 seconds; playback speed unchanged",
+      "nominal_rope_length_m": 0.5,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "sha256": "840c06eedb4f97074ccadef12fc4216c1f62f8efabcec91d81a8f44678811448",
+      "bytes": 258861,
+      "roi": [
+        382,
+        450,
+        76,
+        71
+      ],
+      "roi_evidence": {
+        "green_component_area_px": 2936,
+        "center": [
+          418.84468664850135,
+          484.2966621253406
+        ],
+        "first_frame_only": true
+      },
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum90-take03",
+      "path": "samples/blind-iris/pendulum90-take03.mp4",
+      "source_path": "Pendulum/pendulum_90/03.mp4",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_90/03.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_start_seconds": 2,
+      "duration_seconds": 8,
+      "output_fps": 30,
+      "output_size": [
+        960,
+        540
+      ],
+      "temporal_mapping": "source_time = clip_time + 2 seconds; playback speed unchanged",
+      "nominal_rope_length_m": 0.5,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "sha256": "0b9ed5f094361f7bbcef6643a3e3510994dbb0382a790562dc6326299f47876a",
+      "bytes": 267368,
+      "roi": [
+        76,
+        169,
+        76,
+        73
+      ],
+      "roi_evidence": {
+        "green_component_area_px": 2933,
+        "center": [
+          112.62938970337538,
+          205.82475281281964
+        ],
+        "first_frame_only": true
+      },
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "id": "blind-pendulum90-take06",
+      "path": "samples/blind-iris/pendulum90-take06.mp4",
+      "source_path": "Pendulum/pendulum_90/06.mp4",
+      "source_url": "https://huggingface.co/datasets/rasulkhanbayov/IRIS/resolve/c253822f55431ca80ef2084de4bc5e79d1a488f1/Pendulum/pendulum_90/06.mp4",
+      "source_revision": "c253822f55431ca80ef2084de4bc5e79d1a488f1",
+      "source_start_seconds": 2,
+      "duration_seconds": 8,
+      "output_fps": 30,
+      "output_size": [
+        960,
+        540
+      ],
+      "temporal_mapping": "source_time = clip_time + 2 seconds; playback speed unchanged",
+      "nominal_rope_length_m": 0.5,
+      "license": "CC-BY-NC-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "sha256": "263aa1acceebd1def9103247ce87d3216bfdbd31d2015f4ab016251a2365e34a",
+      "bytes": 264786,
+      "roi": [
+        98,
+        226,
+        74,
+        75
+      ],
+      "roi_evidence": {
+        "green_component_area_px": 3043,
+        "center": [
+          135.04863621426225,
+          262.87117975681895
+        ],
+        "first_frame_only": true
+      },
+      "verified_metadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 960,
+            "height": 540,
+            "avg_frame_rate": "30/1",
+            "nb_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    }
+  ],
+  "evaluation_script_sha256": "2a25e340c01cc11d496563ec917baa676ca060a0cf4f8134bdda032372e0ba07",
+  "protocol_sha256": "8365fbfe8734414692c1536d3bcd0534c61d61df5022264fc52f33fe8b2ca375",
+  "first_evaluation_script_sha256": "66c5604f31e3e9af25edea2f9944367ba3b83ac2ddba468683d1d8c7af06480f"
+}

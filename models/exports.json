@@ -1,0 +1,12 @@
+{
+  "pendulum": {
+    "max_absolute_output_difference": 0.0,
+    "checkpoint_sha256": "4a373f980704503136205e3b7829185906ca76a331f4ecf2b6e0c21c35625e65",
+    "export_sha256": "6df3d8f2d0d80f362198a066a462b1baae8f5c4913165f31d432746663c04a81"
+  },
+  "sliding": {
+    "max_absolute_output_difference": 0.0,
+    "checkpoint_sha256": "a7a006da41e85238b7ac2816556752d6741189f51ae370b846912f4071ed07a7",
+    "export_sha256": "05518e68d147222bb70033bb492895659843d9a2346baf4000665ccbe5aa4c3f"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "scope": "Small supported-family geometry/reversal screen. No arbitrary equation discovery or blind-test claim. Parameter/trajectory benchmarks select the known family explicitly.",
+  "inference_sha256": "9614b8df063b444642957fb0fde3b01348886906db32d9c58502e99d453398e1",
+  "correct": 13,
+  "count": 13,
+  "rows": [
+    {
+      "id": "synthetic-pendulum-0.05",
+      "kind": "synthetic",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.008247513132294819,
+        "motion_reversals": 5,
+        "circle_admissible": true
+      }
+    },
+    {
+      "id": "synthetic-pendulum-0.1",
+      "kind": "synthetic",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.016499688287185718,
+        "motion_reversals": 5,
+        "circle_admissible": true
+      }
+    },
+    {
+      "id": "synthetic-pendulum-0.2",
+      "kind": "synthetic",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.03303827911666647,
+        "motion_reversals": 5,
+        "circle_admissible": true
+      }
+    },
+    {
+      "id": "synthetic-pendulum-0.5",
+      "kind": "synthetic",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.08338676236189514,
+        "motion_reversals": 5,
+        "circle_admissible": true
+      }
+    },
+    {
+      "id": "synthetic-pendulum-0.9",
+      "kind": "synthetic",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.1561126396452591,
+        "motion_reversals": 5,
+        "circle_admissible": true
+      }
+    },
+    {
+      "id": "synthetic-sliding--10",
+      "kind": "synthetic",
+      "expected": "sliding",
+      "selected": "sliding",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.0,
+        "motion_reversals": 0,
+        "circle_admissible": false
+      }
+    },
+    {
+      "id": "synthetic-sliding-0",
+      "kind": "synthetic",
+      "expected": "sliding",
+      "selected": "sliding",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.0,
+        "motion_reversals": 0,
+        "circle_admissible": false
+      }
+    },
+    {
+      "id": "synthetic-sliding-10",
+      "kind": "synthetic",
+      "expected": "sliding",
+      "selected": "sliding",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.0,
+        "motion_reversals": 0,
+        "circle_admissible": false
+      }
+    },
+    {
+      "id": "pendulum20",
+      "kind": "real",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.07800099652025122,
+        "motion_reversals": 6,
+        "circle_admissible": true
+      }
+    },
+    {
+      "id": "pendulum45",
+      "kind": "real",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.0931293283629105,
+        "motion_reversals": 6,
+        "circle_admissible": true
+      }
+    },
+    {
+      "id": "pendulum90",
+      "kind": "real",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.1646948361674899,
+        "motion_reversals": 6,
+        "circle_admissible": true
+      }
+    },
+    {
+      "id": "sliding45",
+      "kind": "real",
+      "expected": "sliding",
+      "selected": "sliding",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.0031357969135629446,
+        "motion_reversals": 0,
+        "circle_admissible": false
+      }
+    },
+    {
+      "id": "rhetos-pendulum",
+      "kind": "real",
+      "expected": "pendulum",
+      "selected": "pendulum",
+      "selection": {
+        "requested": "auto",
+        "method": "fit-prefix geometry and motion-reversal screening",
+        "line_relative_error": 0.018474558663005482,
+        "motion_reversals": 9,
+        "circle_admissible": true
+      }
+    }
+  ]
+}

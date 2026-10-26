@@ -1,0 +1,19 @@
+{
+  "seed": 47,
+  "train_count": 6000,
+  "validation_count": 800,
+  "epochs": 100,
+  "domain": "synthetic only",
+  "models": {
+    "pendulum": {
+      "parameters": 16164,
+      "validation_mse_normalized": 0.0009376623202115297,
+      "runtime_s": 45.933144417009316
+    },
+    "sliding": {
+      "parameters": 16034,
+      "validation_mse_normalized": 6.508485967060551e-06,
+      "runtime_s": 20.80921612493694
+    }
+  }
+}

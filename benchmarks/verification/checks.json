@@ -1,0 +1,52 @@
+{
+  "utc_time": "2026-10-26T00:37:08.905584+00:00",
+  "python": "3.12.13",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "runtime_s": 22.09720891690813,
+      "log": "pytest.txt"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/smoke_installed.py"
+      ],
+      "exit_code": 0,
+      "runtime_s": 12.948692000005394,
+      "log": "pipeline-smoke.txt"
+    }
+  ],
+  "artifact_sha256": {
+    "models/pendulum.pt": "4a373f980704503136205e3b7829185906ca76a331f4ecf2b6e0c21c35625e65",
+    "models/pendulum.pt2": "6df3d8f2d0d80f362198a066a462b1baae8f5c4913165f31d432746663c04a81",
+    "models/pendulum.torchscript": "256945c77f154a6dce593786824e421e487e6d4b3a9ea29cdebf995c0a0e5a0c",
+    "models/sliding.pt": "a7a006da41e85238b7ac2816556752d6741189f51ae370b846912f4071ed07a7",
+    "models/sliding.pt2": "05518e68d147222bb70033bb492895659843d9a2346baf4000665ccbe5aa4c3f",
+    "models/sliding.torchscript": "fb51019a2381c04862aa3f79d36e1fbd3d05a536401e951ab374fe9981d9bbf7",
+    "realityforge/__init__.py": "abb16b181e3de13821ea2a2d9ba3f1fb3bce1d78c0dd5748031f2f7a56eecb47",
+    "realityforge/api.py": "b8a07749abcfa8a868882c665debb439a4a8838c66312786e8c5c6b3243d4241",
+    "realityforge/baselines.py": "851b8c6063814739f31f3808cadf9ca0abc9c51ee7e6e250c207b86ece304e36",
+    "realityforge/cli.py": "d13deb56dff91777cf3f374c3f0f6548b75ba9649681146c261342b161d0ac2e",
+    "realityforge/estimator.py": "f4e76af43ddeb576cf0cbe59f4801a6bbf68870fd8af0cfe3b20d8f356254dee",
+    "realityforge/inference.py": "9614b8df063b444642957fb0fde3b01348886906db32d9c58502e99d453398e1",
+    "realityforge/physics.py": "dc9918ecea00d3138666a35ef8f357f2cb931f8daec757dfff8dbdd2c8647e26",
+    "realityforge/resources.py": "d3dbd08c17efe5fc958ea7b4a48895c8f8ec0d74555bd043e1bf82b8c024624c",
+    "realityforge/tracking.py": "fd474b6d738001f381338c6bb67206443ec88b5bdd5bcc0f1f802e29adc2f5e7",
+    "tests/test_api.py": "8f9366948678940fc826314394d98743387ecd37e3c3dfc9a56c3d584107c11a",
+    "tests/test_iris_baseline.py": "a656f391afd67478301b58f889870f77c0b8bdf722ca87751ab8f2e74da39172",
+    "tests/test_models.py": "44f19deabd772322e3b3ebea457ff0fdd18c783c6f492efad2016a8665ba0600",
+    "tests/test_physics.py": "8cd747e580b31cf93b7eb9b7237cb7cd87b2318bb4971ef0f841295b45db65a4",
+    "tests/test_tracking.py": "00abae74f448d00afbd64eb14173605a3ce11459fc4ec31ba18085e8bda66bed",
+    "web/app.js": "f8f9bc439931f3a386eff60c420dd40626b2548f2c3b7f0550fbfc8067e56709",
+    "web/index.html": "42be70e25061aec635705606d41d9df0a613c8890b2bb4d1f3ca9171311ac0a2",
+    "web/styles.css": "5b39cf12c2751cdcbf32a176d0ca3eed479a25a4f3259124a3c146b86e4ab198"
+  }
+}

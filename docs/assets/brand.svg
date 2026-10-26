@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+<title id="title">RealityForge</title><desc id="desc">From video to inspectable physics. A scientific workbench for planar pendulum and sliding motion.</desc>
+<rect width="1280" height="420" fill="#f3f1eb"/>
+<g stroke="#d8dcd6" stroke-width="1"><path d="M0 338h1280M0 339h1280"/><path d="M866 70v224M926 70v224M986 70v224M1046 70v224M1106 70v224M1166 70v224M836 102h360M836 162h360M836 222h360M836 282h360"/></g>
+<g transform="translate(68 71) scale(1.9)" fill="none" stroke="#232d31" stroke-width="2.3"><path d="M4 28V7h13a7 7 0 0 1 0 14H4m13 0 12 7M4 7l25 21"/><circle cx="17" cy="14" r="3" fill="#dd5a3c" stroke="none"/></g>
+<text x="155" y="121" fill="#232d31" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="53" font-weight="600" letter-spacing="-2">RealityForge</text>
+<text x="75" y="203" fill="#232d31" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="45" letter-spacing="-1.5">The world moves.</text>
+<text x="75" y="254" fill="#618a78" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="45" letter-spacing="-1.5">Find the rules.</text>
+<text x="77" y="302" fill="#77807f" font-family="ui-monospace,monospace" font-size="13" letter-spacing="2">VIDEO → PARAMETERS → PREDICTION → WHAT IF</text>
+<path d="M1016 89v140" stroke="#77807f" stroke-width="2"/><path d="M1016 89l-103 150" stroke="#3469b0" stroke-width="2"/><path d="M1016 89l106 150" stroke="#dd5a3c" stroke-width="2"/>
+<path d="M907 237a188 188 0 0 0 220 0" stroke="#618a78" stroke-width="1.5" fill="none" stroke-dasharray="3 5"/>
+<circle cx="1016" cy="89" r="5" fill="#232d31"/><circle cx="913" cy="239" r="14" fill="#3469b0"/><circle cx="1122" cy="239" r="14" fill="#dd5a3c"/>
+<text x="77" y="384" fill="#77807f" font-family="ui-monospace,monospace" font-size="12" letter-spacing="1.3">PLANAR DYNAMICS / PENDULUM &amp; SLIDING</text>
+<text x="1194" y="384" text-anchor="end" fill="#77807f" font-family="ui-monospace,monospace" font-size="12" letter-spacing="1.3">LOCAL · CPU READY</text>
+</svg>

@@ -1,0 +1,88 @@
+{
+  "source": "Actual local RealityForge UI; original generated fixture; no mocked network responses",
+  "events": [
+    {
+      "name": "generated_fixture_loaded",
+      "time_s": 0.434
+    },
+    {
+      "name": "recovery_requested",
+      "time_s": 2.11
+    },
+    {
+      "name": "recovery_completed",
+      "time_s": 8.347
+    },
+    {
+      "name": "actual_analysis_response",
+      "time_s": 8.353,
+      "metrics": {
+        "fit_rmse_px": 0.43686229450312947,
+        "forecast_rmse_px": 0.4242577682529551,
+        "jacobian_condition": 17.648980486989718,
+        "residual_sigma": 0.0010108180618607673,
+        "function_evaluations": 21,
+        "runtime_s": 6.227596499957144
+      },
+      "model": "pendulum",
+      "training": "seeded synthetic trajectories only"
+    },
+    {
+      "name": "observation_and_forecast_playback",
+      "time_s": 10.301
+    },
+    {
+      "name": "real_counterfactual_ready",
+      "time_s": 16.807
+    },
+    {
+      "name": "heldout_comparison",
+      "time_s": 23.915
+    },
+    {
+      "name": "analysis_exported",
+      "time_s": 26.389
+    }
+  ],
+  "errors": [],
+  "raw_video": "page@66be415c70e58c26b9d6fdb789ba90c7.webm",
+  "raw_video_sha256": "0c6821c3782c58ab38222fce3219d8d9da5858fd63010a98d27996d45db63f63",
+  "duration_s": 28.08,
+  "editing": "Added captions only; full original recording timing retained. GIF is a 5.8 s excerpt during actual counterfactual playback.",
+  "captions": [
+    {
+      "start_s": 0,
+      "end_s": 2.11,
+      "title": "01 / Choose an experiment",
+      "subtitle": "Original generated fixture. Real recording tests are reported separately."
+    },
+    {
+      "start_s": 2.11,
+      "end_s": 8.347,
+      "title": "02 / Recover dynamics on the local CPU",
+      "subtitle": "Actual tracking, neural initialization and differentiable physical fitting."
+    },
+    {
+      "start_s": 8.347,
+      "end_s": 16.807,
+      "title": "03 / Compare observation and held-out forecast",
+      "subtitle": "Only the first 65% of motion fits the model."
+    },
+    {
+      "start_s": 16.807,
+      "end_s": 23.915,
+      "title": "04 / Change gravity / length",
+      "subtitle": "Orange: changed conditions. Blue: recovered physical model."
+    },
+    {
+      "start_s": 23.915,
+      "end_s": 28.08,
+      "title": "05 / Inspect the forecast and export the evidence",
+      "subtitle": "Trajectory, parameters, local uncertainty and provenance."
+    }
+  ],
+  "artifacts": {
+    "realityforge-demo.mp4": "ee9b0e59a2ac1bf5dc730297d79dcbd8b4dc5c5fb335d3613e7d3ad90b984ad9",
+    "realityforge-demo.gif": "738e84b6ddab9ea5426096ec2fb27c4464518640d5e6fc71fa19fd7d98bb155f"
+  }
+}
