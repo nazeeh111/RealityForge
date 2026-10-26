@@ -11,5 +11,3 @@ RealityForge's original source, generated sample videos, synthetic training data
 - Screenshots or videos that include either recording must honor that recording's attribution and license. The demo video uses only the original MIT generated fixture, clearly labeled synthetic.
 
 For a code-only MIT distribution, exclude third-party media/metadata and any images or video containing their footage, and remove their sample-manifest entries. The application can use personal uploads and generated fixtures without those assets. Never imply that the IRIS dataset's noncommercial restriction applies to the original MIT source, or that the source's MIT license relicenses the experimental recordings.
-
-Research references: PhysTwin (MIT), SimFoundry (Apache-2.0), IRIS benchmark code (MIT). Their methods informed design choices; no copyright notice for copied source is required because none is incorporated. See `docs/research.md` for inspected revisions and concrete use.

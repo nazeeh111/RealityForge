@@ -137,9 +137,9 @@ tests/              Independent solver, gradient, tracking, model and API checks
 docs/               Method, model card, evaluation, reproducibility and research audit
 ```
 
-## Research foundations
+## Research record
 
-[PhysTwin](https://github.com/Jianghanxiao/PhysTwin) motivates explicit physical fitting; [SimFoundry](https://github.com/NVlabs/simfoundry) informs modular observation-to-simulation stages. [IRIS](https://github.com/KurbanIntelligenceLab/iris-bench) and its [study](https://arxiv.org/abs/2603.16432) motivate real-video evaluation, identifiability and extrapolation checks. The study and IRIS repository describe the same research project. RealityForge vendors none of their code or weights. [Inspected commits, licenses and concrete design decisions →](docs/research.md)
+The [research record](docs/research.md) links the source studies, inspected revisions and concrete design decisions.
 
 ## License and contribution
 
