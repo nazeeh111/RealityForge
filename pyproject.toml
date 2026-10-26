@@ -8,7 +8,7 @@ version = "0.1.0"
 readme = "README.md"
 description = "Calibrated planar video-to-physics with learned initialization and differentiable refinement"
 requires-python = ">=3.11,<3.15"
-license = "MIT"
+license = "MIT AND CC-BY-NC-4.0 AND CC-BY-SA-4.0"
 license-files = ["LICENSE", "NOTICE.md"]
 dependencies = ["torch>=2.6,<3", "numpy>=2,<3", "scipy>=1.14,<2", "opencv-python-headless>=4.10,<5", "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "python-multipart>=0.0.20", "pillow>=11,<13"]
 [project.urls]

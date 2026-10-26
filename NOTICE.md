@@ -1,5 +1,7 @@
 # License boundaries
 
+The packaged distribution declares `MIT AND CC-BY-NC-4.0 AND CC-BY-SA-4.0` because its wheel includes separately licensed benchmark media. This combined package expression does not change the original source/weight license.
+
 RealityForge's original source, generated sample videos, synthetic training data generator and newly trained estimator weights are MIT licensed. Dependencies retain their licenses. No upstream research implementation or pretrained weights are vendored.
 
 **Not every file in this distribution is MIT:**
