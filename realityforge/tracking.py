@@ -50,21 +50,29 @@ def track_video(path, roi=None, fit_fraction=.65):
     if not .3<=float(fit_fraction)<=.85: raise ValueError('Fit fraction must be between 0.30 and 0.85.')
     info=video_info(path)
     fps,width,height,stride,count,scale=info
-    # Two passes bound memory: at most 31 grayscale frames for background,
-    # then one current color frame while tracking. Future pixels never enter the background.
+    # Foreground mode counts kept frames, samples at most 31 grayscale
+    # fit-prefix frames, then tracks one current color frame at a time.
     iterator=iter_video(path,info)
-    try: _,first=next(iterator)
+    try:
+        _,first=next(iterator)
+        # Count kept frames with the same stride and limits as the later passes.
+        # Metadata may overstate how many frames the decoder can return.
+        if roi is None:
+            decoded_count=1+sum(1 for _ in iterator)
+            if decoded_count<16: raise ValueError('At least 16 decoded frames are required.')
     except StopIteration: raise ValueError('At least 16 decoded frames are required.')
-    iterator.close()
+    finally: iterator.close()
     first_gray=cv2.cvtColor(first,cv2.COLOR_BGR2GRAY)
     background=None
     if roi is None:
-        fit_count=max(1,int(count*fit_fraction))
+        fit_count=max(1,int(decoded_count*fit_fraction))
         indices=set(np.linspace(0,fit_count-1,min(31,fit_count)).astype(int))
         backgrounds=[]
         for index,(_,frame) in enumerate(iter_video(path,info)):
             if index in indices: backgrounds.append(cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY))
             if index>=fit_count-1: break
+        if len(backgrounds)!=len(indices):
+            raise ValueError('Video decoded frame count changed between passes. Retry with a stable local clip.')
         background=np.median(backgrounds,axis=0).astype('uint8')
     warnings=[]
     if count==min(1800,int(np.floor(60*fps/stride))+1): warnings.append('Video truncated at the 60-second or 1800-frame analysis limit.')
@@ -142,6 +150,8 @@ def track_video(path, roi=None, fit_fraction=.65):
             previous=point
             coords.append(point/scale);scores.append(score)
     xy=np.array(coords); confidence=np.array(scores)
+    if roi is None and len(xy)!=decoded_count:
+        raise ValueError('Video decoded frame count changed between passes. Retry with a stable local clip.')
     if np.mean(confidence<.4)>.15: warnings.append('Tracking confidence is low in more than 15% of frames. Inspect the overlay and choose a tighter object region.')
     if np.ptp(xy,axis=0).max()<8: raise ValueError('Insufficient motion: tracked displacement is less than 8 pixels.')
     if len(xy)<16: raise ValueError('At least 16 decoded frames are required.')
