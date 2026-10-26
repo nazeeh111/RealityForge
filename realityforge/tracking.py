@@ -50,11 +50,15 @@ def track_video(path, roi=None, fit_fraction=.65):
     if not .3<=float(fit_fraction)<=.85: raise ValueError('Fit fraction must be between 0.30 and 0.85.')
     info=video_info(path)
     fps,width,height,stride,count,scale=info
-    # Two passes bound memory: at most 31 grayscale frames for background,
-    # then one current color frame while tracking. Future pixels never enter the background.
+    # Count decoded frames before automatic background selection: container
+    # headers may overreport the length. Three passes keep memory bounded to
+    # 31 grayscale frames and keep future pixels out of the fitted background.
     iterator=iter_video(path,info)
     try: _,first=next(iterator)
     except StopIteration: raise ValueError('At least 16 decoded frames are required.')
+    if roi is None:
+        count=1+sum(1 for _ in iterator)
+        if count<16: raise ValueError('At least 16 decoded frames are required.')
     iterator.close()
     first_gray=cv2.cvtColor(first,cv2.COLOR_BGR2GRAY)
     background=None
