@@ -17,7 +17,7 @@ It is an original implementation with trained weights, real recording checks, an
 
 [Watch the short app demo](docs/assets/realityforge-demo.mp4) · [Method](docs/method.md) · [Benchmarks](docs/evaluation.md) · [Model card](docs/model-card.md) · [Reproduce](docs/reproducibility.md)
 
-The demo runs the actual application on an original **generated fixture**, visibly labeled synthetic. Real IRIS and independent recording results are reported separately below. No inference response is mocked.
+The recorded tour shows the earlier interface running an original **generated fixture**, visibly labeled synthetic. Real IRIS and independent recording results are reported separately below. No inference response is mocked.
 
 ## Run locally
 
@@ -59,7 +59,12 @@ Nominal 95% intervals are **uncalibrated local sensitivity estimates**, conditio
 
 ## How it works
 
-<img src="docs/assets/architecture.svg" width="1100" alt="Video passes through streaming tracking, planar geometry, learned parameter initialization, differentiable fitting and forecast validation, then interactive counterfactual simulation">
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/assets/architecture-portrait.svg">
+  <img src="docs/assets/architecture.svg" alt="An observed track feeds initial-window model recovery and a remaining-track forecast check. A separate optional branch edits parameters and simulates a conditional counterfactual.">
+</picture>
+
+[Follow the default hybrid workflow in the source](docs/architecture.md).
 
 - **Inspect motion:** bounded-memory video decoding; adaptive color centroids with a first-frame region, template matching when color is unavailable, or fit-window foreground tracking.
 - **Choose observable coordinates:** fit a circular arc or straight path using only the observation window. Preserve pixels and timestamp units.

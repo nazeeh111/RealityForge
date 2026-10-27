@@ -1,1 +1,190 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc"><title id="title">RealityForge architecture</title><desc id="desc">Video tracking, planar coordinates, learned initialization, differentiable physics and forecast validation feed an interactive counterfactual simulation.</desc><rect width="1200" height="320" rx="16" fill="#f3f1eb"/><g font-family="system-ui,sans-serif" fill="#263b35"><text x="32" y="39" font-size="13" letter-spacing="2">AN OBSERVATION BECOMES A TESTABLE MODEL</text></g><g stroke="#c9d2c8" fill="#fffefa"><rect x="32" y="69" width="200" height="122" rx="7"/><rect x="266" y="69" width="200" height="122" rx="7"/><rect x="500" y="69" width="200" height="122" rx="7"/><rect x="734" y="69" width="200" height="122" rx="7"/><rect x="968" y="69" width="200" height="122" rx="7"/></g><g font-family="system-ui,sans-serif"><g fill="#64816c" font-size="11"><text x="49" y="93">01 / OBSERVE</text><text x="283" y="93">02 / COORDINATES</text><text x="517" y="93">03 / INITIALIZE</text><text x="751" y="93">04 / REFINE</text><text x="985" y="93">05 / TEST</text></g><g fill="#263b35" font-size="17" font-weight="600"><text x="49" y="124">Streaming tracking</text><text x="283" y="124">Planar geometry</text><text x="517" y="124">ParameterNet</text><text x="751" y="124">Physical equations</text><text x="985" y="124">Withheld forecast</text></g><g fill="#64766c" font-size="12"><text x="49" y="150">Color / template / foreground</text><text x="49" y="170">Pixels + timestamps</text><text x="283" y="150">Circle or straight path</text><text x="283" y="170">Fit-window observations</text><text x="517" y="150">96 observations + 4 features</text><text x="517" y="170">Synthetic-only training</text><text x="751" y="150">Differentiable trajectory fit</text><text x="751" y="170">Parameters + local intervals</text><text x="985" y="150">Residuals + failure warnings</text><text x="985" y="170">Evidence before editing</text></g></g><g stroke="#7e9484" stroke-width="1.8" fill="none"><path d="M236 130h24m-6-4 6 4-6 4M470 130h24m-6-4 6 4-6 4M704 130h24m-6-4 6 4-6 4M938 130h24m-6-4 6 4-6 4"/><path d="M834 196v39H600m7-4-7 4 7 4"/></g><rect x="300" y="217" width="300" height="66" rx="7" fill="#263b35"/><text x="320" y="244" fill="#f3f1eb" font-family="system-ui,sans-serif" font-size="16">Change conditions. Simulate again.</text><text x="320" y="266" fill="#b9cbbd" font-family="system-ui,sans-serif" font-size="12">Editable parameters → the same physical solver</text><text x="650" y="271" font-family="system-ui,sans-serif" fill="#7b6b5b" font-size="12">No arbitrary 3D inference · no cloud model calls</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1184" viewBox="0 0 1000 1184" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">RealityForge: measure, recover, test, explore</title><desc id="figure-desc">A schematic method diagram for the default hybrid workflow. A video is tracked before the initial-window split. Initial observed positions determine a circle or line geometry, ParameterNet initialization and physical refinement. The recovered original model is checked against the remaining observed track. Separately, optional parameter edits rerun the same equations with the same geometry and time axis. No plotted marks are measured results.</desc>
+<defs>
+<marker id="arrow-brass" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#dfbb79" stroke-width="1.4"/></marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#94bfff" stroke-width="1.4"/></marker>
+<marker id="arrow-coral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#f49a88" stroke-width="1.4"/></marker>
+<marker id="arrow-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#afbdcf" stroke-width="1.4"/></marker>
+</defs>
+<rect x="0" y="0" width="1000" height="1184" rx="0" fill="#0b1422"/>
+<text x="36" y="31" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1.1">REALITYFORGE  /  HYBRID METHOD</text>
+<text x="36" y="77" fill="#f1eee6" font-family="Georgia,serif" font-size="34" font-weight="400" text-anchor="start">Measure motion. Test an explanation.</text>
+<text x="36" y="107" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="start">One object · fixed camera · two supported planar families</text>
+<g id="semantic-key">
+<path d="M585 128H604" fill="none" stroke="#dfbb79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="611" y="132" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="start">observed</text>
+<path d="M711 128H730" fill="none" stroke="#94bfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="737" y="132" fill="#94bfff" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="start">original model</text>
+<path d="M872 128H891" fill="none" stroke="#f49a88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 3"/>
+<text x="898" y="132" fill="#f49a88" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="start">edited</text>
+</g>
+<path d="M36 144H964" fill="none" stroke="#34465b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="measurement">
+<text x="36" y="174" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1.1">01  MEASURE THE VIDEO</text>
+<g id="measurement-mechanics">
+<g transform="translate(42 194) scale(1.1)">
+<path d="M0 18V0H20 M180 18V0H160 M0 100V118H20 M180 100V118H160" fill="none" stroke="#34465b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M87 24V105" fill="none" stroke="#34465b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 5"/>
+<path d="M35 76Q83 130 139 76" fill="none" stroke="#dfbb79" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 6"/>
+<path d="M87 24L38 78" fill="none" stroke="#34465b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="38" cy="78" r="6" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<path d="M87 24L84 104" fill="none" stroke="#34465b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="84" cy="104" r="6" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<path d="M87 24L137 79" fill="none" stroke="#dfbb79" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="137" cy="79" r="6" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<rect x="122" y="64" width="30" height="30" rx="2" fill="none" stroke="#dfbb79" stroke-width="1"/>
+<circle cx="87" cy="24" r="3" stroke="#f1eee6" stroke-width="1.5" fill="#f1eee6"/>
+<path d="M12 30H38" fill="none" stroke="#afbdcf" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-muted)"/>
+<path d="M12 30V56" fill="none" stroke="#afbdcf" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-muted)"/>
+<text x="42" y="34" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" text-anchor="start">x</text>
+<text x="8" y="69" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" text-anchor="start">y</text>
+</g>
+</g>
+<text x="44" y="347" fill="#f1eee6" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="600" text-anchor="start">Track one object</text>
+<text x="44" y="372" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="start">ROI color / template / foreground</text>
+<text x="44" y="393" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="start">Mechanics sketch is schematic.</text>
+<path d="M262 263H327" fill="none" stroke="#dfbb79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="video-to-observed-track" marker-end="url(#arrow-brass)"/>
+<text x="294" y="246" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="middle">track</text>
+<g id="observed-track">
+<text x="350" y="201" fill="#f1eee6" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="600" text-anchor="start">Observed image-plane record</text>
+<text x="350" y="228" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" text-anchor="start">Positions (x, y) · timestamps t · confidence w</text>
+<rect x="350" y="252" width="556" height="62" rx="3" fill="#121f30" stroke="#34465b" stroke-width="1"/>
+<rect x="350" y="252" width="351" height="62" rx="3" fill="#242a2c"/>
+<circle cx="374" cy="274" r="3.8" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<text x="374" y="299" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">t₀</text>
+<circle cx="425" cy="274" r="3.8" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<text x="425" y="299" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">t₁</text>
+<circle cx="476" cy="274" r="3.8" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<text x="476" y="299" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">…</text>
+<circle cx="527" cy="274" r="3.8" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<text x="527" y="299" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">…</text>
+<circle cx="578" cy="274" r="3.8" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<text x="578" y="299" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">t[m]</text>
+<circle cx="735" cy="274" r="3.8" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<text x="735" y="299" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">t[m+1]</text>
+<circle cx="801" cy="274" r="3.8" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<text x="801" y="299" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">…</text>
+<circle cx="867" cy="274" r="3.8" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<text x="867" y="299" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">t[n]</text>
+<path d="M701 242V324" fill="none" stroke="#dfbb79" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<text x="526" y="343" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="middle">Initial window → recover</text>
+<text x="804" y="343" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="middle">Remaining track</text>
+<text x="350" y="374" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="start">Tracking happens before this inference split.</text>
+</g>
+</g>
+<path d="M350 283H316V414H145V457" fill="none" stroke="#dfbb79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="initial-record-to-geometry" marker-end="url(#arrow-brass)"/>
+<path d="M906 283H954V937H930" fill="none" stroke="#dfbb79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="observed-suffix-to-forecast-check" stroke-dasharray="3 6" marker-end="url(#arrow-brass)"/>
+<text x="933" y="437" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="end">observed suffix</text>
+<g id="fit-window">
+<rect x="36" y="463" width="869" height="250" rx="8" fill="#121f30"/>
+<text x="56" y="492" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1.1">02  RECOVER FROM THE INITIAL WINDOW</text>
+<g id="geometry-schematic">
+<g transform="translate(65 505) scale(0.9)">
+<path d="M6 62A42 42 0 0 0 84 62" fill="none" stroke="#dfbb79" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 4"/>
+<circle cx="45" cy="38" r="2.4" stroke="#dfbb79" stroke-width="1.5" fill="#dfbb79"/>
+<path d="M45 38L75 77" fill="none" stroke="#dfbb79" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="13" cy="66" r="3.2" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<circle cx="29" cy="79" r="3.2" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<circle cx="52" cy="85" r="3.2" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<circle cx="75" cy="77" r="3.2" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<text x="46" y="104" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="middle">circle</text>
+<text x="103" y="62" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="middle">or</text>
+<path d="M123 82L187 43" fill="none" stroke="#dfbb79" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="128" cy="79" r="3.2" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<circle cx="148" cy="67" r="3.2" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<circle cx="167" cy="55" r="3.2" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<circle cx="183" cy="46" r="3.2" stroke="#dfbb79" stroke-width="1.5" fill="#0b1422"/>
+<text x="157" y="104" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="middle">line</text>
+</g>
+</g>
+<text x="66" y="628" fill="#f1eee6" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" text-anchor="start">Fit geometry + family</text>
+<text x="66" y="651" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="start">Pendulum or sliding</text>
+<text x="66" y="677" fill="#dfbb79" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="start">Geometry then stays fixed.</text>
+<path d="M271 566H330" fill="none" stroke="#dfbb79" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="geometry-to-initializer" marker-end="url(#arrow-brass)"/>
+<g id="initializer-network-glyph">
+<g transform="translate(368 529) scale(0.9)">
+<path d="M5 8L43 18" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 8L43 38" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 8L43 58" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 28L43 18" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 28L43 38" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 28L43 58" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 48L43 18" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 48L43 38" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 48L43 58" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 68L43 18" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 68L43 38" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 68L43 58" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53 18L91 28" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53 18L91 48" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53 38L91 28" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53 38L91 48" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53 58L91 28" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M53 58L91 48" fill="none" stroke="#34465b" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="0" cy="8" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+<circle cx="0" cy="28" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+<circle cx="0" cy="48" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+<circle cx="0" cy="68" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+<circle cx="48" cy="18" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+<circle cx="48" cy="38" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+<circle cx="48" cy="58" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+<circle cx="96" cy="28" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+<circle cx="96" cy="48" r="5" stroke="#94bfff" stroke-width="1.2" fill="#121f30"/>
+</g>
+</g>
+<text x="342" y="628" fill="#f1eee6" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="600" text-anchor="start">ParameterNet</text>
+<text x="342" y="651" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="start">96 samples + 4 features</text>
+<text x="342" y="677" fill="#94bfff" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="start">Synthetic-only training</text>
+<path d="M506 566H565" fill="none" stroke="#94bfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="initializer-to-refinement" marker-end="url(#arrow-blue)"/>
+<g id="physical-refinement">
+<text x="605" y="547" fill="#94bfff" font-family="Georgia,serif" font-size="23" font-weight="400" text-anchor="start">θ″ = −k sin θ − βθ′</text>
+<text x="605" y="580" fill="#94bfff" font-family="Georgia,serif" font-size="22" font-weight="400" text-anchor="start">s = x₀ + v₀t + ½at²</text>
+<text x="605" y="628" fill="#f1eee6" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="600" text-anchor="start">Refine physical parameters</text>
+<text x="605" y="651" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="start">Confidence-weighted Huber loss</text>
+<text x="605" y="677" fill="#94bfff" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="start">L-BFGS · fixed fitted geometry</text>
+</g>
+</g>
+<path d="M751 713V731H687V750" fill="none" stroke="#94bfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="refinement-to-recovered-model" marker-end="url(#arrow-blue)"/>
+<g id="recovered-model">
+<rect x="278" y="756" width="448" height="77" rx="5" fill="#192e4c" stroke="#94bfff" stroke-width="1"/>
+<text x="297" y="781" fill="#94bfff" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1.1">RECOVERED MODEL</text>
+<text x="297" y="808" fill="#f1eee6" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="600" text-anchor="start">Parameters + initial state + fitted geometry</text>
+</g>
+<path d="M600 833V875H724V899" fill="none" stroke="#94bfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="original-model-to-forecast-check" marker-end="url(#arrow-blue)"/>
+<text x="626" y="857" fill="#94bfff" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="start">Original parameters</text>
+<path d="M400 833V874H88V909" fill="none" stroke="#f49a88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="model-to-optional-parameter-edits" stroke-dasharray="6 4" marker-end="url(#arrow-coral)"/>
+<text x="37" y="858" fill="#f49a88" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="600" text-anchor="start" letter-spacing="0.7">OPTIONAL  /  CHANGE THE CONDITIONS</text>
+<g id="counterfactual-branch">
+<path d="M36 895V1044H476" fill="none" stroke="#f49a88" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M65 919V967" fill="none" stroke="#34465b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="60" y="928" width="10" height="5" rx="1" fill="#f49a88"/>
+<path d="M88 919V967" fill="none" stroke="#34465b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="83" y="947" width="10" height="5" rx="1" fill="#f49a88"/>
+<path d="M111 919V967" fill="none" stroke="#34465b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="106" y="937" width="10" height="5" rx="1" fill="#f49a88"/>
+<text x="67" y="994" fill="#f49a88" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start">Edit p</text>
+<path d="M133 944H173" fill="none" stroke="#f49a88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="edits-to-same-equations" marker-end="url(#arrow-coral)"/>
+<text x="202" y="941" fill="#f49a88" font-family="Georgia,serif" font-size="26" font-weight="400" text-anchor="middle">f(p′)</text>
+<path d="M174 956H230" fill="none" stroke="#f49a88" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="201" y="994" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="middle">Same equations</text>
+<path d="M239 944H279" fill="none" stroke="#f49a88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="same-equations-to-counterfactual" marker-end="url(#arrow-coral)"/>
+<circle cx="309" cy="942" r="8" stroke="#f49a88" stroke-width="1.5" fill="none"/>
+<path d="M325 942H347" fill="none" stroke="#f49a88" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-coral)"/>
+<circle cx="371" cy="942" r="8" stroke="#f49a88" stroke-width="1.5" fill="#f49a88"/>
+<text x="291" y="994" fill="#f49a88" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start">Changed motion</text>
+<text x="57" y="1025" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="start">Same geometry + time axis · conditional prediction</text>
+</g>
+<g id="forecast-check">
+<rect x="522" y="903" width="408" height="141" rx="5" fill="#f1eee6"/>
+<text x="542" y="931" fill="#172a44" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="600" text-anchor="start" letter-spacing="1.1">03  TEST THE ORIGINAL MODEL</text>
+<text x="542" y="961" fill="#172a44" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="600" text-anchor="start">Predicted suffix ↔ tracked suffix</text>
+<text x="542" y="990" fill="#172a44" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" text-anchor="start">Pixel RMSE + assumption warnings</text>
+<text x="542" y="1020" fill="#465872" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="start">No edited parameters enter this check.</text>
+</g>
+<path d="M36 1080H964" fill="none" stroke="#34465b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="scope-notes">
+<text x="36" y="1105" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="start">Schematic symbols, no measured curves. Local intervals are uncalibrated.</text>
+<text x="36" y="1129" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="start">Pendulum recovers k = g/L, not separate g and L; sliding recovers image-plane acceleration.</text>
+<text x="36" y="1153" fill="#afbdcf" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" text-anchor="start">Camera, scale, fitted geometry and model assumptions condition both branches.</text>
+</g>
+</svg>
