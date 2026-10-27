@@ -174,3 +174,40 @@ def test_nominal_and_roi_preserve_known_native_motion(tmp_path,monkeypatch,roi,r
     assert track.warnings==[]
     assert np.all(track.confidence>.4)
     assert all(cap.released for cap in captures)
+
+
+def test_overreported_video_count_keeps_future_pixels_out_of_background(tmp_path, monkeypatch):
+    """Real AVI decoding may stop before its advertised header frame count."""
+    import struct
+    import realityforge.tracking as tracking
+    path = tmp_path / 'overreported.avi'
+    writer = cv2.VideoWriter(str(path), cv2.VideoWriter_fourcc(*'MJPG'), 20, (320, 200))
+    if not writer.isOpened():
+        pytest.skip('OpenCV MJPEG writer unavailable on this platform')
+    for index in range(40):
+        frame = np.full((200, 320, 3), 60 + index * 3, dtype=np.uint8)
+        cv2.circle(frame, (30 + 4 * index, 100), 8, (0, 0, 220), -1)
+        writer.write(frame)
+    writer.release()
+    payload = bytearray(path.read_bytes())
+    # AVI main and stream headers both advertise 180 frames; 40 really exist.
+    for chunk, offset in ((b'avih', 24), (b'strh', 40)):
+        struct.pack_into('<I', payload, payload.index(chunk) + offset, 180)
+    path.write_bytes(payload)
+    info = tracking.video_info(path)
+    assert info[4] == 180
+    decoded = list(tracking.iter_video(path, info))
+    assert len(decoded) == 40
+    expected = np.median([cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+                          for _, frame in decoded[:26]], axis=0).astype('uint8')
+    actual_backgrounds = []
+    class BackgroundObserved(Exception):
+        pass
+    def observed_absdiff(frame, background):
+        actual_backgrounds.append(background.copy())
+        raise BackgroundObserved
+    monkeypatch.setattr(cv2, 'absdiff', observed_absdiff)
+    with pytest.raises(BackgroundObserved):
+        track_video(path, fit_fraction=.65)
+    assert actual_backgrounds
+    np.testing.assert_array_equal(actual_backgrounds[0], expected)
