@@ -23,7 +23,7 @@ The current frontend explicitly sends null for cleared optional calibration fiel
 - `assets/realityforge-comparison.png`: actual in-app comparison-image export.
 - `assets/iris-workbench-cc-by-nc.jpg`: actual IRIS20 result. Contains CC BY-NC4.0 footage; separate attribution/license applies.
 
-Generated fixtures and their presentation assets are original MIT work. IRIS screenshot credit: Rasul Khanbayov, Mohamed Rayan Barhdadi, Erchin Serpedin and Hasan Kurban, CC BY-NC4.0. See `assets/NOTICE.md` and `../samples/iris/NOTICE.md`.
+Generated fixtures and their presentation assets are original MIT work. IRIS screenshot credit: Rasul Khanbayov, Mohamed Rayan Barhdadi, Erchin Serpedin and Hasan Kurban, CC BY-NC4.0. See the data and media terms in `../LICENSE`.
 
 ## Verification limits
 

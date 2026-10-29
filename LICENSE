@@ -19,3 +19,29 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+Data and media terms, separate from the MIT software license
+
+samples/iris/, samples/blind-iris/ and IRIS-derived screenshots:
+IRIS, Rasul Khanbayov, Mohamed Rayan Barhdadi, Erchin Serpedin and Hasan Kurban.
+CC BY-NC 4.0: https://creativecommons.org/licenses/by-nc/4.0/
+Source: https://huggingface.co/datasets/rasulkhanbayov/IRIS
+Revision: c253822f55431ca80ef2084de4bc5e79d1a488f1.
+Changes: take10 excerpts downscaled from 3840x2160 to 960x540 and 60fps to 30fps
+without playback-speed changes, audio removed, H.264 encoding. Blind excerpts:
+fixed 2..10 second intervals from take03/take06 of pendulum20,45,90, resized to
+960x540 and 30fps, audio removed and H.264 encoded. Source/derived hashes and
+selection details remain in samples/provenance.json and samples/blind-provenance.json.
+These recordings and their derivatives retain the noncommercial terms.
+
+samples/independent/rhetos-pendulum.mp4:
+Schwingung (Definition).webm, Rhetos / Mathe-AC Lernwerkstatt Aachen, 28 May 2024.
+CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
+Source: https://commons.wikimedia.org/wiki/File:Schwingung_(Definition).webm
+Changes: excerpt 15..25 seconds, 1920x1080 to 960x540, audio removed, H.264,
+original 25fps timing retained. This adaptation retains CC BY-SA 4.0.
+Exact source and derived identities are in samples/provenance.json.
+
+Original generated fixtures, estimator weights and presentation assets remain MIT.
+No dataset-author endorsement is implied; the software license does not relicense media.

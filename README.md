@@ -148,6 +148,6 @@ Original code, trained weights and generated fixtures: **[MIT](LICENSE)**. Real 
 - IRIS clips and metadata: **CC BY-NC 4.0**, with attribution. These assets are not licensed for unrestricted commercial use.
 - Independent Rhetos recording: **CC BY-SA 4.0**, with attribution and share-alike requirements for adaptations.
 
-Read [NOTICE.md](NOTICE.md) and the notices beside each recording before redistributing media. For a code-only MIT distribution, exclude the third-party media/metadata and remove their sample-manifest entries. The main demo uses only original generated footage.
+Read the [data and media terms in LICENSE](LICENSE) before redistributing media. For a code-only MIT distribution, exclude the third-party media/metadata and remove their sample-manifest entries. The main demo uses only original generated footage.
 
 [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [Citation](CITATION.cff)

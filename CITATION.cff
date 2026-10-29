@@ -8,7 +8,7 @@ authors:
   - name: RealityForge contributors
 repository-code: https://github.com/nazeeh111/RealityForge
 license: MIT
-abstract: "Local planar video-to-physics inference with compact learned parameter initialization, differentiable physics refinement, held-out prediction and interactive counterfactuals. Separately licensed experimental media is identified in NOTICE.md."
+abstract: "Local planar video-to-physics inference with compact learned parameter initialization, differentiable physics refinement, held-out prediction and interactive counterfactuals. Separately licensed experimental media is identified in LICENSE."
 keywords:
   - inverse physics
   - system identification

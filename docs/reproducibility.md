@@ -91,7 +91,7 @@ python scripts/fetch_evaluation_data.py \
 
 Existing destination files are skipped. The script prints hashes and preserves a source manifest. It seeks to the documented source windows, resizes and transcodes without changing playback speed. Acquisition can fail if the public host, byte-range support or FFmpeg HTTPS support changes; retain the original source URL and exact clip transformations from [`samples/provenance.json`](../samples/provenance.json).
 
-Do not treat the source MIT license as permission to relicense the IRIS recordings or independent footage. See the [top-level notices](../NOTICE.md) and recording-folder notices before redistribution.
+Do not treat the source MIT license as permission to relicense the IRIS recordings or independent footage. See the [data and media terms](../LICENSE) before redistribution.
 
 ## Reading and sharing an analysis
 

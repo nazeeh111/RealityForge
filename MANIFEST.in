@@ -1,4 +1,4 @@
-include LICENSE NOTICE.md README.md
+include LICENSE README.md
 recursive-include web *.html *.css *.js *.svg
 recursive-include models *.pt *.pt2 *.json *.torchscript
 recursive-include samples *.mp4 *.md *.json

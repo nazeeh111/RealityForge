@@ -10,7 +10,6 @@ class BuildWithAssets(build_py):
         destination=Path(self.build_lib)/'realityforge'/'assets'
         for folder in ('web','models','samples'):
             shutil.copytree(folder,destination/folder,dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
-        for filename in ('NOTICE.md','LICENSE'):
-            shutil.copy2(filename,destination/filename)
+        shutil.copy2('LICENSE',destination/'LICENSE')
 
 setup(cmdclass={'build_py':BuildWithAssets})
