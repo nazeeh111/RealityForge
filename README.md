@@ -1,23 +1,14 @@
-<p align="center"><img src="docs/assets/brand.svg" width="900" alt="RealityForge / the world moves. Find the rules."></p>
+# RealityForge
 
-<p align="center">
-  <a href="https://github.com/nazeeh111/RealityForge/actions/workflows/test.yml"><img src="https://github.com/nazeeh111/RealityForge/actions/workflows/test.yml/badge.svg" alt="CPU tests"></a>
-  <img src="https://img.shields.io/badge/Python-3.11–3.14-386b58" alt="Python 3.11 to 3.14">
-  <img src="https://img.shields.io/badge/Inference-local_CPU-386b58" alt="Local CPU inference">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/Code-MIT-386b58" alt="MIT code license"></a>
-</p>
+**Recover pendulum or sliding dynamics from video.**
 
-**Turn a video into a physical model. Then change the conditions and ask what if.**
-
-RealityForge is a local application for identifying **planar pendulum and straight-line sliding dynamics** from ordinary experiment videos. Track a moving object, recover observable parameters with a compact PyTorch estimator and differentiable physics, inspect a held-out forecast, and change the parameters in an interactive workbench.
-
-It is an original implementation with trained weights, real recording checks, analytical comparisons and reproducible experiments. Its scientific scope is deliberately explicit: fixed camera, one tracked object, two supported dynamics families. It does not reconstruct general 3D scenes or discover arbitrary physical laws.
+Track one moving object, fit its observable parameters, inspect a held-out forecast, and change the conditions in a local workbench. The supported models assume a fixed camera and planar motion. It does not reconstruct general 3D scenes or discover arbitrary physical laws.
 
 <p align="center"><img src="docs/assets/realityforge-demo.gif" width="1100" alt="RealityForge workbench with synchronized recording, simulation, trajectory forecast and editable physical parameters"></p>
 
-[Watch the short app demo](docs/assets/realityforge-demo.mp4) · [Method](docs/method.md) · [Benchmarks](docs/evaluation.md) · [Model card](docs/model-card.md) · [Reproduce](docs/reproducibility.md)
+*Actual application tour using an original generated fixture, labeled synthetic. It records the earlier interface; real-recording results appear in the measured evidence below.*
 
-The recorded tour shows the earlier interface running an original **generated fixture**, visibly labeled synthetic. Real IRIS and independent recording results are reported separately below. No inference response is mocked.
+[Run locally](#run-locally) · [Watch the demo](docs/assets/realityforge-demo.mp4) · [Method](docs/method.md) · [Benchmarks](docs/evaluation.md) · [Model card](docs/model-card.md)
 
 ## Run locally
 
@@ -102,6 +93,8 @@ Real recording errors measure predicted position against automatically extracted
 We compare neural initialization, analytical estimation, analytical plus physics refinement, hybrid inference and constant velocity. The published IRIS pendulum recurrence is also evaluated with an observed-angle adapter, clearly separated from the full learned IRIS encoder. Matched published end-to-end baseline scores are not claimed. [Exact protocols, failures and limits →](docs/evaluation.md)
 
 ## Reproduce and extend
+
+[Reproduction guide](docs/reproducibility.md) · [CPU test workflow](https://github.com/nazeeh111/RealityForge/actions/workflows/test.yml) · [MIT code license](LICENSE)
 
 ```bash
 # Independent physical, tracking, model and API checks
